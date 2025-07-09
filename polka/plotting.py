@@ -31,6 +31,8 @@ def plot_pc(pc, models, label_sources=False, save=None):
 
     fig, ax = plt.subplots()
 
+    # 
+
     # Observations
     if label_sources and pc.src is not None:
 
@@ -54,7 +56,6 @@ def plot_pc(pc, models, label_sources=False, save=None):
             label=f"Observations",
         )
 
-    # ------
     # Models
     for i, model in enumerate(models):
         model = getattr(pc, model)  # switch to actual model instance
@@ -77,14 +78,14 @@ def plot_pc(pc, models, label_sources=False, save=None):
 
         ax.plot(phase_eval, pol_eval, label=label, ls="-")
 
-    # ------
-    # Set up figure
+    # Axes
     ax.set(
         xlabel="Phase Angle / deg",
         ylabel="Linear polarisation",
         xlim=(0, pc.phase.max()),
     )
 
+    # Legend
     ax.legend(
         title=(
             f"({pc.target.number}) {pc.target.name}"
@@ -93,6 +94,7 @@ def plot_pc(pc, models, label_sources=False, save=None):
         )
     )
 
+    # Export
     if save is None:
         plt.show()
     else:
