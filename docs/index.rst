@@ -55,7 +55,7 @@ Fit the traditionnal linear-exponential model to the observations.
 
    Home<self>
    Getting Started<getting_started>
-   Basic Usage<core>
+   Basic Usage<basic_usage>
    Models<models>
    Release notes<releases>
    Glossary<glossary>

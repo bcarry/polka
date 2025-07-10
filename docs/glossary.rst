@@ -5,6 +5,11 @@ Glossary
 .. glossary::
 
 
+    Julian date (JD)
+
+        The Julian date is a continuous count of days since the beginning of the Julian Period on January 1, 4713 BC.
+        
+
     Phase angle
 
         The angle between the Sun and the observer as seen from the asteroid. 

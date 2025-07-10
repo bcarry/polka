@@ -54,7 +54,7 @@ the degree of linear polarization of light :math:`P_r`
 reflected from a surface as function of the :term:`phase angle<Phase angle>` (:math:`\alpha`). It was
 originally defined by 
 `Muinonen et al. (2002) <https://ui.adsabs.harvard.edu/abs/2002MmSAI..73..716M/abstract>`_.
-In POLKA, we use the reformulation by
+In `polka`, we use the reformulation by
 `Devogèle et al. (2017) <https://ui.adsabs.harvard.edu/abs/2017MNRAS.465.4335D/abstract>`_, 
 in which :math:`P_r` is null at zero :term:`phase angle<Phase angle>`: 
 
@@ -70,6 +70,19 @@ in which :math:`P_r` is null at zero :term:`phase angle<Phase angle>`:
  :align: center
  :class: only-dark
  :width: 80%
+
+
+:octicon:`infinity;1em` Trigonometric model
+=============================================
+
+The trigonometric model is an empirical model describing
+the degree of linear polarization of light :math:`P_r`
+reflected from a surface as function of the :term:`phase angle<Phase angle>` (:math:`\alpha`). It was
+defined by 
+`Lumme & Muinonen (1993) <https://ui.adsabs.harvard.edu/abs/1993LPICo.810..194L/abstract>`_: 
+
+.. math ::
+    P_r = b \left( \sin \alpha\right)^{c_1} \left( \cos \frac{\alpha}{2} \right)^{c_2} \sin( \alpha - \alpha_{inv}) 
 
 
 
