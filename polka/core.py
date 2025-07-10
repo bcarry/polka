@@ -95,6 +95,8 @@ class PhaseCurve:
         if models is None:
             models = sorted(self.fitted_models)
 
-        polka.plotting.plot_pc(
+        f, a = polka.plotting.plot_pc(
             self, models, label_sources, show_parameters, black, save
         )
+
+        return f, a

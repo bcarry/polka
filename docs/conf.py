@@ -22,7 +22,7 @@ copyright = "2025, Benoit Carry"
 author = "Benoit Carry"
 
 # The full version, including alpha/beta/rc tags
-release = "0.1.2"
+release = "0.1.3"
 html_title = "polka"
 
 

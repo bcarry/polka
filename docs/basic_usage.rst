@@ -12,7 +12,7 @@ and a list of ``pol`` to the ``PhaseCurve``.
 
 .. code-block:: python
 
-   from phunk import PhaseCurve
+   from polka import PhaseCurve
 
    phase = [14.4, 18.5, 19.9, 23.7]
    pol = [-1.63, -1.25, -1.14, -0.65]
@@ -32,7 +32,7 @@ which should be a list which defines the source of each observation.
 
 .. code-block:: python
 
-   from phunk import PhaseCurve
+   from polka import PhaseCurve
 
    phase = [14.4, 18.5, 19.9, 23.7]
    pol = [-1.63, -1.25, -1.14, -0.65]
@@ -49,7 +49,7 @@ At any point, you can check the sources of your observations using the ``src`` a
    
 
 :octicon:`issue-reopened;1em` Computing Ephemerides
-+++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 If you do not have the ``phase`` angle , ``polka``
 can query the required values for you from the
@@ -83,8 +83,10 @@ attribute of the ``PhaseCurve`` object:
 
 
 
+
+
 :octicon:`sliders;1em` Fitting Models
-==============
+=====================================
 
 To fit one of the available :ref:`polarimetric models <models>`, use the ``.fit`` method of the ``PhaseCurve``
 and provide a list of models to fit.
@@ -119,8 +121,25 @@ the ``PhaseCurve`` via the dot notation.
 All available model attributes are given in the model description.
 
 
+
+Once a model has been fit, you can predict the linear degree of polarization for
+any given phase angle using the ``.eval`` method of the model class. 
+
+.. code-block:: python
+
+   from polka import PhaseCurve
+
+   phase = [14.4, 18.5, 19.9, 23.7]
+   pol = [-1.63, -1.25, -1.14, -0.65]
+   
+   pc = PhaseCurve(phase=phase, pol=pol)
+
+   pc.fit())
+   pc.LinExp.eval(10.0)
+
+
 :octicon:`graph;1em` Plotting Curves
-===============
+====================================
 
 Use the ``.plot`` method of the ``PhaseCurve`` class to plot phase curves.
 You can select which models to add to the plot using the ``models`` argument.

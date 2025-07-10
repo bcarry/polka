@@ -85,3 +85,5 @@ def plot_pc(
         fig.tight_layout()
         fig.savefig(save)
         print(f"Saved figure under {save}")
+
+    return fig, ax
