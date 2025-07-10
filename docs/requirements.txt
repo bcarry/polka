@@ -1,5 +1,6 @@
 furo
 jinja2
+sphinx
 sphinx-hoverxref
 sphinx-redactor-theme
 sphinx_copybutton

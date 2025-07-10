@@ -1,0 +1,8 @@
+numpy
+pandas
+matplotlib
+lmfit
+space-rocks
+astropy
+requests
+scipy
