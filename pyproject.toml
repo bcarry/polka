@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "space-polka"
-version = "0.1.1"
+version = "0.1.2"
 description = "POLarimetry toolKit for Asteroids"
 authors = ["Benoit Carry <benoit.carry@oca.eu>"]
 license = "MIT"

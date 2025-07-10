@@ -77,7 +77,14 @@ class PhaseCurve:
         ephem = polka.miriade.query(self.target.name, self.epoch)
         self.phase = ephem["Phase"].to_numpy()
 
-    def plot(self, models=None, label_sources=None, save=None):
+    def plot(
+        self,
+        models=None,
+        label_sources=False,
+        show_parameters=False,
+        black=False,
+        save=None,
+    ):
         """Plot polarimetric phase curve and model fits.
 
         Parameters
@@ -88,4 +95,6 @@ class PhaseCurve:
         if models is None:
             models = sorted(self.fitted_models)
 
-        polka.plotting.plot_pc(self, models, label_sources, save)
+        polka.plotting.plot_pc(
+            self, models, label_sources, show_parameters, black, save
+        )

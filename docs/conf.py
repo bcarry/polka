@@ -17,13 +17,12 @@ sys.path.insert(0, os.path.abspath("../polka"))
 
 
 # -- Project information -----------------------------------------------------
-
 project = "polka"
 copyright = "2025, Benoit Carry"
 author = "Benoit Carry"
 
 # The full version, including alpha/beta/rc tags
-release = "0.1"
+release = "0.1.2"
 html_title = "polka"
 
 
@@ -59,7 +58,6 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 
 graphviz_output_format = "svg"
-
 
 # ------
 # hoverxref_role_types = {

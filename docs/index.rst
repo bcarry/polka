@@ -8,7 +8,7 @@
 
 .. role:: gray
 
-A ``python`` package to fit polarimetruc phase curves of asteroids.
+A ``python`` package to fit polarimetric phase curves of asteroids.
 
 .. highlight:: python
 
@@ -20,9 +20,9 @@ Collect the polarimetry of your favourite asteroid under varying phase angles.
 
 .. code-block:: python
 
-   # Observations 
-   phase = [0.57, 1.09, 3.20, 10.99, 14.69, 20.42]
-   pol = [6.555, 6.646, 6.793, 7.130, 7.210, 7.414]
+   # Observations of Barbara from Cellino et al. (2005)
+   phase = [14.4, 18.5, 19.9, 23.7]
+   pol = [-1.63, -1.25, -1.14, -0.65]
 
 Load the observations into ``polka``.
 
@@ -37,6 +37,15 @@ Fit the traditionnal linear-exponential model to the observations.
    pc.fit()
    pc.plot()
 
+.. image:: gfx/barbara_simple.png
+ :align: center
+ :class: only-light
+ :width: 80%
+
+.. image:: gfx/barbara_simple_black.png
+ :align: center
+ :class: only-dark
+ :width: 80%
 
 
 .. toctree::
@@ -48,5 +57,8 @@ Fit the traditionnal linear-exponential model to the observations.
    Getting Started<getting_started>
    Basic Usage<core>
    Models<models>
+   Release notes<releases>
+   Glossary<glossary>
+
 
 
