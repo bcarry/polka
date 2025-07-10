@@ -4,7 +4,7 @@ on: push
 
 jobs:
   build:
-    name: Build distribution
+    name: Build POLKA
     runs-on: ubuntu-latest
 
     steps:
@@ -15,7 +15,6 @@ jobs:
       uses: actions/setup-python@v5
       with:
         python-version: "3.x"
-
     - name: Install pypa/build
       run: >-
         python3 -m
@@ -30,15 +29,16 @@ jobs:
         name: python-package-distributions
         path: dist/
 
-    publish-to-pypi:
-    name: Publish POLKA to PyPI
+  publish-to-pypi:
+    name: >-
+      Publish POLKA to PyPI
     if: startsWith(github.ref, 'refs/tags/')  # only publish to PyPI on tag pushes
     needs:
     - build
     runs-on: ubuntu-latest
     environment:
       name: pypi
-      url: https://pypi.org/p/space-polka
+      url: https://pypi.org/p/space-polka  # Replace <package-name> with your PyPI project name
     permissions:
       id-token: write  # IMPORTANT: mandatory for trusted publishing
 
@@ -48,9 +48,8 @@ jobs:
       with:
         name: python-package-distributions
         path: dist/
-    - name: Publish distribution to PyPI
+    - name: Publish POLKA to PyPI
       uses: pypa/gh-action-pypi-publish@release/v1
-
 
   publish-to-testpypi:
     name: Publish POLKA to TestPyPI
@@ -71,7 +70,7 @@ jobs:
       with:
         name: python-package-distributions
         path: dist/
-    - name: Publish POLKA to TestPyPI
+    - name: Publish distribution 📦 to TestPyPI
       uses: pypa/gh-action-pypi-publish@release/v1
       with:
         repository-url: https://test.pypi.org/legacy/
