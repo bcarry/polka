@@ -96,8 +96,8 @@ html_theme_options = {
     "sidebar_hide_name": True,
     "navigation_with_keys": True,
     "top_of_page_button": None,
-    "light_logo": "logo_polka.svg",
-    "dark_logo": "logo_polka_light.svg",
+    "light_logo": "logo_polka_light.svg",
+    "dark_logo": "logo_polka_dark.svg",
 }
 
 
